@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="estilo.css" rel="stylesheet">
+  
+
+</head>
+<body>
+  <div class="iphone">
+    <div class="iphone-header">
+      <div class="iphone-header__cicle"></div>
+      <div class="iphone-header__cicle--2">
+        <div class="cicle-1"></div>
+        <div class="rectangle-1"></div>
+      </div>
+    </div>
+    <div class="iphone-main">
+      <div class="iphone-main--top">
+        <span>
+          <i class="fas fa-circle"></i>
+          <i class="fas fa-circle"></i>
+          <i class="fas fa-circle"></i>
+          <i class="fas fa-circle"></i>
+          <i class="fas fa-circle"></i>
+          <i class="fas fa-wifi"></i>
+          
+        </span>
+          
+        <span>10:30 am</span>
+        <span>95% &nbsp; <i class="fas fa-battery-three-quarters" ></i></span>
+      </div>
+      <div class="iphone-main--main">
+        <h3>10<span class="time-animation">:</span>00</h3>
+        <p>Quarta-feira, 10 de Maio</p>
+        <button id="butt">clique para desbloquear</button>
+      </div>
+      <div class="iphone-main--footer">
+        <div class="iphone-main--footer__1"></div>
+        <div class="iphone-main--footer__2"></div>
+        <div class="iphone-main--footer__3"><i class="fas fa-camera"></i></div>
+      </div>
+      
+      <div id="app" class="mainVue">
+        <img v-bind:src="json.avatar_url" />
+        <h3 v-for="user name">{{json.name}}</h3>
+        <p v-for="user email">{{email}}</p>
+      </div> 
+      
+    </div>
+    <div class="iphone-footer">
+      <div class="iphone-footer__call"></div>
+    </div>
+    
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.8/vue.min.js"></script>
+  <script>
+const app = new Vue ({
+ el: '#app',
+ data: {
+  json: null,
+  email: "teste@emailteste.com"
+},
+created() {
+  fetch('https://api.github.com/users/daniel-maker')
+  .then(response => response.json())
+  .then(json => {
+  this.json = json 
+  
+})
+}
+})
+ let btn = document.getElementById("butt")
+ let div1 = document.getElementsByClassName("iphone-main--main")
+ let div2 = document.getElementsByClassName("iphone-main--footer")
+ let mainVue = document.getElementsByClassName("mainVue")
+
+ btn.addEventListener('click', function () {
+  
+  div1[0].style.display = 'none'
+  div2[0].style.display = 'none' 
+  mainVue[0].style.display = 'block'
+  mainVue[0].style.animation = 'fadeIn 2s normal'
+
+});
+
+</script>
+
+ </body>
+</html>
