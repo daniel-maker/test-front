@@ -1,9 +1,9 @@
-Nome Completo: Luiz Boça
+Nome Completo: Daniel Biazuzo
 
-E-mail: luiz.boca@clubedosminigameiros.com.br
+E-mail: danielmaker@gmail.com
 
-Linkedin: http://linkedin.com/luiz.boca
+Linkedin: https://www.linkedin.com/in/danielbiazuzo/
 
-Telefone: (44) 44444-4444 
+Telefone: (11) 97996-6207 
 
-Portfólio (Opicional): clubedosminigameiros.com.br/portfolio
+Portfólio (Opicional): https://codepen.io/danielbiazuzo/
